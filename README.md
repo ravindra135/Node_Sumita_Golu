@@ -183,11 +183,16 @@ Process of creating an API:
 - Command to commit changes: `git commit -m "commit message"`
 <!-- - Command to push changes to the remote repo: `git push origin master` -->
 - Create a new Github repository and link it to the local repo using `git remote add origin <repository-url>`
+- To check the config of the repo: `git config --list`
+
 - To push changes to the remote repo: `git push origin master`
 
 - How to create a new branch? To Create a new branch, use the command `git branch <branch-name>`
 - How to switch to a branch? To switch to a branch, use the command `git checkout <branch-name>`
 - How to merge a branch? To merge a branch, use the command `git merge <branch-name>`
+
+- To check the status of the repo: `git status`
+- To check the log of the repo: `git log`
 
 - What is the difference between git pull and git fetch?
 ```
