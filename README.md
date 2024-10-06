@@ -185,7 +185,7 @@ Process of creating an API:
 - Create a new Github repository and link it to the local repo using `git remote add origin <repository-url>`
 - To check the config of the repo: `git config --list`
 
-- To push changes to the remote repo: `git push origin master`
+- To push changes to the remote repo: `git push origin <branch-name>`
 
 - How to create a new branch? To Create a new branch, use the command `git branch <branch-name>`
 - How to switch to a branch? To switch to a branch, use the command `git checkout <branch-name>`
