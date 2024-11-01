@@ -28,7 +28,7 @@ pool.getConnection(function (err, connection) {
     return;
   }
 
-  // Impoortant Connection should be released (close) after use.
+  // Important Connection should be released (close) after use.
   connection.release();
 });
 

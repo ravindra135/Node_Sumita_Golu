@@ -224,5 +224,48 @@ module.exports = {
     // The function should reject with an error if the list is empty or contains non-numeric values.
     promiseImplement: (req, res) => {
         // Your Code Here.....
+    },
+
+    exampleTesting: (req,res) => {
+        const v = req.body.value;
+        const resPromise = () => {
+            return new Promise((resolve,reject) => {
+
+                if(v > 10) {
+                    setTimeout(() => {
+                        console.log("Promise Resolved");
+                        resolve(v);
+                    }, 5000);
+                } else {
+                    reject(new Error('Value should be greater than 10'))
+                }
+
+                
+            });
+        }
+
+        resPromise()
+            .then((value) => {
+                let value1 = value * 2;
+                return value1;
+            })
+            .then((value1) => {
+                let value2 = value1 * 3;
+                return value2;
+            })
+            .then((value2) => {
+                res.status(200).json({
+                    status: "success",
+                    value: value2
+                });
+                return;
+            })
+            .catch(error => {
+                res.status(500).json({
+                    status: "fail",
+                    message: "Error getting data " + error.message
+                });
+                return;
+            });
     }
 }

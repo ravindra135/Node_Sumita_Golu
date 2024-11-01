@@ -8,4 +8,6 @@ router.get('/get/:id', todoController.getTodo);
 router.patch('/update/:id', todoController.updateTodo);  
 router.delete('/delete/:id', todoController.deleteTodo);
 
+// Example of using, Async and Await & Promises;
+
 module.exports = router;
